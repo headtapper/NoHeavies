@@ -4,7 +4,7 @@
 * 
 * You may not copy, modify, share, distribute, publish, or sell copies of this software.
 * 
-* You may use this plugin for personal use on your own Rust server if you purchased it from https://codefling.com.
+* You may use this plugin for personal use on your own Rust server if you downloaded it from https://codefling.com.
 * 
 * You may not use components of the software's code base for any other purpose.
 * 
