@@ -2,8 +2,8 @@
 Block heavy scientist spawns at oilrigs.
 
 # Features
-Block heavy scientist spawns at small and/or large oilrig.
-Configure which oilrigs to block.
+* Block heavy scientist spawns at small and/or large oilrig.
+* Configure which oilrigs to block.
 
 # Configuration
 ```
