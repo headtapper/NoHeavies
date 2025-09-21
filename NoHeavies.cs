@@ -68,6 +68,7 @@ namespace Oxide.Plugins
             {
                 timer.Once((float)10.0f, () =>
                 {
+                    if (entity == null || entity.IsDestroyed) return;
                     if (config.BlockSmallOilrigHeavies && IsEntityNearMonument(entity, "oilrig_2"))
                         entity.Kill();
                     if (config.BlockLargeOilrigHeavies && IsEntityNearMonument(entity, "oilrig_1"))
@@ -83,7 +84,7 @@ namespace Oxide.Plugins
         private bool IsEntityNearMonument(BaseEntity entity, string monumentName)
         {
             if (entity == null) return false;
-            MonumentInfo monument = TerrainMeta.Path.Monuments.FirstOrDefault(m => m.name.Contains(monumentName, StringComparison.OrdinalIgnoreCase));
+            MonumentInfo monument = TerrainMeta.Path.Monuments.Find(m => m.name.Contains(monumentName, StringComparison.OrdinalIgnoreCase));
             if (monument == null) return false;
             return Vector3.Distance(entity.transform.position, monument.transform.position) < 600f;
         }
